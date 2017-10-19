@@ -58,21 +58,21 @@ app.use(allowCrossDomain);
 
 const compiler = webpack(webpackConfig);
 
-// app.use(webpackDevMiddleware(compiler, {
-//   hot: true,
-//   filename: 'bundle.js',
-//   publicPath: '/',
-//   stats: {
-//     colors: true,
-//   },
-//   historyApiFallback: true
-// }));
+app.use(webpackDevMiddleware(compiler, {
+  hot: true,
+  filename: 'bundle.js',
+  publicPath: '/',
+  stats: {
+    colors: true,
+  },
+  historyApiFallback: true
+}));
 
-// console.log('__dirname', __dirname);
+console.log('__dirname', __dirname);
 
-// app.use(historyApiFallback({
-//   verbose: false
-// }));
+app.use(historyApiFallback({
+  verbose: false
+}));
 
 
 app.use(express.static(__dirname + '/../www'));
@@ -97,11 +97,11 @@ app.get('/auth/google/callback', passport.authenticate('google', {
                                                                     failureRedirect: '/' 
                                                                   } ));
 
-console.log("__dirname", __dirname);
+// console.log("__dirname", __dirname);
 
-app.get('InfiniteSpace', (req,res) => { res.sendFile(path.join(__dirname + '/../www/index.html'))});
-app.get('tms', (req,res) => { res.sendFile(path.join(__dirname + '/../www/index.html'))});
-app.get('calendar', (req,res) => { res.sendFile(path.join(__dirname + '/../www/index.html')) });
+// app.get('InfiniteSpace', (req,res) => { res.sendFile(path.join(__dirname + '/../www/index.html'))});
+// app.get('tms', (req,res) => { res.sendFile(path.join(__dirname + '/../www/index.html'))});
+// app.get('calendar', (req,res) => { res.sendFile(path.join(__dirname + '/../www/index.html')) });
 //Todo
 // app.get('tms', todoController.getTodo);
 app.get('/api/todo',  todoController.getTodo);

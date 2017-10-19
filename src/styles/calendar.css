@@ -29,7 +29,7 @@
 }
 
 .cal-heading {
-  background-color: #84C842;
+  background-color: ##D4D2D7;
   width: 100%;
   height: 60px;
   line-height: 60px;
@@ -50,7 +50,7 @@
   left: 0px;
   z-index: 3;
   width: 100%;
-  background-color: purple;
+  background-color: #D4D2D7;
   font-size: 18px;
   font-weight: bold;
   margin-top: 0px;
@@ -62,7 +62,7 @@
   left: 0px;
   z-index: 0;
   width: 100%;
-  background-color: blue;
+  background-color: #D4D2D7;
   font-size: 18px;
   font-weight: bold;
   margin-top: 0px;
